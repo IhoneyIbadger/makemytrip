@@ -1,0 +1,1 @@
+This project will one day plan my trip around the world focusing on saving money and finding amazing places.

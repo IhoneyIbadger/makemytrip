@@ -1,46 +1,20 @@
-package com.myapp;
-
-public class Main {
+public class MainApplication {
     public static void main(String[] args) {
-        // Your application logic goes here
-        
-        // Example code: Print a welcome message
-        System.out.println("Welcome to My App!");
-        
-        // Create instances of other classes and use them as needed
-        
-        // Example code: Create a Destination object
-        Destination destination = new Destination("Paris", "The City of Lights", "France", 5);
-        
-        // Example code: Print destination details
-        System.out.println("Destination: " + destination.getName());
-        System.out.println("Description: " + destination.getDescription());
-        System.out.println("Country: " + destination.getCountry());
-        System.out.println("Rating: " + destination.getRating());
-        
-        // Example code: Retrieve flights using FlightDataRetriever
-        FlightDataRetriever flightDataRetriever = new FlightDataRetriever();
-        List<Flight> flights = flightDataRetriever.retrieveFlights(destination);
-        
-        // Example code: Print flight details
-        for (Flight flight : flights) {
-            System.out.println("Flight from " + flight.getSource() + " to " + flight.getDestination());
-            System.out.println("Departure date: " + flight.getDepartureDate());
-            System.out.println("Price: " + flight.getPrice());
-        }
-        
-        // Example code: Analyze flights using FlightAnalyzer
-        FlightAnalyzer flightAnalyzer = new FlightAnalyzer();
-        List<Flight> sortedFlights = flightAnalyzer.sortByPrice(flights);
-        
-        // Example code: Print sorted flight details
-        System.out.println("Sorted flights by price:");
-        for (Flight flight : sortedFlights) {
-            System.out.println("Flight from " + flight.getSource() + " to " + flight.getDestination());
-            System.out.println("Departure date: " + flight.getDepartureDate());
-            System.out.println("Price: " + flight.getPrice());
-        }
-        
-        // Continue with the rest of your application logic
+        // Instantiate services
+        FlightDataService flightDataService = new FlightDataService();
+        WeatherService weatherService = new WeatherService();
+        DestinationService destinationService = new DestinationService();
+        BudgetService budgetService = new BudgetService();
+        UserAuthService userAuthService = new UserAuthService();
+        RecommendationService recommendationService = new RecommendationService();
+
+        // Use the services in your application logic
+        // Example:
+        List<Flight> flights = flightDataService.getRecommendedFlights(destination);
+        Weather weather = weatherService.getWeatherForDestination(destination);
+        List<Destination> destinations = destinationService.getAllDestinations();
+        Budget budget = budgetService.calculateBudget(flights, accommodations, expenses);
+        User user = userAuthService.login(username, password);
+        List<Destination> recommendedDestinations = recommendationService.getRecommendedDestinations(userId);
     }
 }

@@ -14,7 +14,7 @@ public class WeatherDataRetriever {
 
     public Weather retrieveWeatherData(String cityName) {
         Dotenv dotenv = Dotenv.load();
-        String apiKey = dotenv.get("API_KEY");
+        String apiKey = dotenv.get("WEATHER_API_KEY");
 
         try {
             String apiUrl = buildApiUrl(cityName, apiKey);

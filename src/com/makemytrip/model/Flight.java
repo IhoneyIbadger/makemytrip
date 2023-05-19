@@ -49,23 +49,41 @@ public class Flight {
 
     // Setters
 
-    public void setAirline(String airline) { this.airline = airline; }
+    public void setAirline(String airline) { 
+        this.airline = airline; 
+    }
 
-    public void setFlightNumber(String flightNumber) { this.flightNumber = flightNumber; }
+    public void setFlightNumber(String flightNumber) { 
+        this.flightNumber = flightNumber; 
+    }
 
-    public void setDepartureAirport(String departureAirport) { this.departureAirport = departureAirport; }
+    public void setDepartureAirport(String departureAirport) { 
+        this.departureAirport = departureAirport; 
+    }
 
-    public void setArrivalAirport(String arrivalAirport) { this.arrivalAirport = arrivalAirport; }
+    public void setArrivalAirport(String arrivalAirport) { 
+        this.arrivalAirport = arrivalAirport; 
+    }
 
-    public void setDepartureTime(String departureTime) { this.departureTime = departureTime; }
+    public void setDepartureTime(String departureTime) { 
+        this.departureTime = departureTime; 
+    }
 
-    public void setArrivalTime(String arrivalTime) { this.arrivalTime = arrivalTime; }
+    public void setArrivalTime(String arrivalTime) { 
+        this.arrivalTime = arrivalTime; 
+    }
 
-    public void setDepartureDate(String departureDate) { this.departureDate = departureDate; }
+    public void setDepartureDate(String departureDate) { 
+        this.departureDate = departureDate; 
+    }
 
-    public void setArrivalDate(String arrivalDate) { this.arrivalDate = arrivalDate; }
+    public void setArrivalDate(String arrivalDate) { 
+        this.arrivalDate = arrivalDate; 
+    }
 
-    public void setPrice(String price) { this.price = price; }
+    public void setPrice(String price) { 
+        this.price = price; 
+    }
 
     // toString
 
